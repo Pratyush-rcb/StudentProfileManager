@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class StudentProfileManager {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/pk";
-        String user = "root";
-        String password = "root@1234";
+        String user = "";
+        String password = "";
 
         Scanner sc = new Scanner(System.in);
         try {
