@@ -44,8 +44,11 @@ public class StudentProfileManager {
             e.printStackTrace();
         }
     }
+    
+    //Adding students
 
     public static void addStudent(Connection con, Scanner sc) throws Exception{
+        
         System.out.print("Enter ID: ");
         int id = sc.nextInt();
         sc.nextLine();
@@ -74,8 +77,10 @@ public class StudentProfileManager {
         else System.out.println("student not added");
 
     }
-
+// updating Details
+    
     public static void updateStudent(Connection con, Scanner sc) throws Exception{
+        
         System.out.print("Enter ID to updarte: ");
         int id = sc.nextInt();
         sc.nextLine();
@@ -134,8 +139,11 @@ public class StudentProfileManager {
 
         System.out.println("Update completed!");
     }
-
+    
+//Delete Students Detail
+    
     public static void deleteStudent(Connection con, Scanner sc)throws Exception{
+        
         System.out.println("Enter id to delete:");
         int id=sc.nextInt();
         sc.nextLine();
@@ -151,6 +159,8 @@ public class StudentProfileManager {
         ps.close();
 
     }
+    // view Details of Students
+    
     public static void viewStudent(Connection con, Scanner sc) throws Exception {
         System.out.print("Enter ID to view: ");
         int id = sc.nextInt();
@@ -186,7 +196,9 @@ public class StudentProfileManager {
     }
 
     // View all students (without images)
+    
     public static void viewAllStudents(Connection con) throws Exception {
+        
         String query = "SELECT id, name, email FROM students";
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery(query);
